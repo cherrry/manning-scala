@@ -50,6 +50,7 @@ object List {
       case Cons(x, xs) => f(x, foldRight(xs, z)(f))
     }
   }
+
   def product(ds: List[Double]): Double = {
     ds match {
       case Cons(0.0, _) => 0.0
@@ -76,6 +77,7 @@ object List {
   def sum(ns: List[Int]): Int = {
     foldLeft(ns, 0)(_ + _)
   }
+
   def product(ds: List[Double]): Double = {
     foldLeft(ds, 1.0)(_ * _)
   }
